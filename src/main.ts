@@ -2,6 +2,19 @@ import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
+import { clone } from './clone'
+
+const jack = {
+  name: 'Jack',
+  age: 10,
+  address: {
+    city: 'Shanghai',
+    street: 'No. 123',
+  },
+}
+const jack2 = clone(jack)
+jack2.address.city = 'Beijing'
+console.log(jack.address.city) // Shanghai
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
