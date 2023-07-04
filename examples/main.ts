@@ -1,8 +1,17 @@
+/*
+ * @Author      : ZhouQiJun
+ * @Date        : 2023-07-04 09:26:49
+ * @LastEditors : ZhouQiJun
+ * @LastEditTime: 2023-07-04 09:31:48
+ * @Description : 入口文件
+ */
 import './style.css'
+// @ts-ignore
 import typescriptLogo from './typescript.svg'
+// @ts-ignore
 import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
-import { clone } from './clone'
+import { setupCounter } from './counter'
+import { clone } from '../src/clone'
 
 const jack = {
   name: 'Jack',

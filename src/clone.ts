@@ -2,7 +2,7 @@
  * @Author      : ZhouQiJun
  * @Date        : 2023-04-29 20:19:57
  * @LastEditors : ZhouQiJun
- * @LastEditTime: 2023-07-03 17:29:00
+ * @LastEditTime: 2023-07-04 09:59:02
  * @Description : 深复制
  */
 import { type } from './type'
@@ -12,7 +12,7 @@ import { type } from './type'
  * @param {any} source
  * @returns
  */
-function clone(source) {
+function clone(source: any): any {
   const t = type(source)
   if (!['object', 'array'].includes(t)) return source
   let target
@@ -28,6 +28,8 @@ function clone(source) {
     target = {}
     for (const key in source) {
       if (Object.prototype.hasOwnProperty.call(source, key)) {
+        // source.hasOwnProperty(key)
+        // @ts-ignore
         target[key] = clone(source[key])
       }
     }
@@ -35,7 +37,7 @@ function clone(source) {
   return target
 }
 
-function last(arr) {
+function last(arr: any[]) {
   return arr.at(-1)
 }
 
